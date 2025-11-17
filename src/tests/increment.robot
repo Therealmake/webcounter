@@ -14,6 +14,7 @@ When button pressed twice the counter is two
     Click Button  Paina
     Click Button  Paina
     Page Should Contain  nappia painettu 2 kertaa
+    Click Button  Nollaa
 
 Pressing reset should reset value
     Go To  ${HOME_URL}
@@ -21,3 +22,9 @@ Pressing reset should reset value
     Click Button  Paina
     Click Button  Nollaa
     Page Should Contain  nappia painettu 0 kertaa
+
+Can set any value
+    Go To  ${HOME_URL}
+    Input Text  new_value  15
+    Click Button  Aseta
+    Page Should Contain  nappia painettu 15 kertaa    
